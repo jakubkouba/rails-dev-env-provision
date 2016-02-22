@@ -1,0 +1,16 @@
+server {
+  listen <%= @conf[:port].nil? ? 80 : @conf[:port] %>;
+  server_name <%= @conf[:server_name].nil? ? 'localhost' : @conf[:server_name] %>;
+
+  access_log <%= node.nginx.app_access_log %>;
+  error_log <%= node.nginx.app_error_log %>;
+
+  root <%= @conf[:site_root] %>/public;
+
+  passenger_enabled on;
+
+  rails_env <%= @conf[:env] %>;
+  passenger_ruby <%= @conf[:passenger_ruby] %>;
+  passenger_user <%= @conf[:user] %>;
+
+}

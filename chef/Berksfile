@@ -1,0 +1,10 @@
+source "https://api.berkshelf.com"
+
+cookbook 'apt', '~> 2.9.2'
+cookbook 'build-essential', '~> 2.2.4'
+cookbook 'rvm', '~> 0.9.4'
+cookbook 'mysql', '~> 6.1.2'
+cookbook 'nginx_passenger', '~> 0.5.7'
+cookbook 'nodejs', '~> 2.4.4'
+cookbook 'database', '~> 4.0.9'
+cookbook 'mysql2_chef_gem', '~> 1.0.2'
